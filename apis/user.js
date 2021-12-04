@@ -1,18 +1,21 @@
 const Bcrypt = require('bcrypt');
 const Signup = require('../models/user')
 const Config = require('../config')
-const common = require('../utils/common')
+const Common = require('../utils/common')
 const ValidatorUtil = require('../utils/validation');
 
 //SIGNUP
 exports.signup = async (req, res, next) => {
 	try {
+
+        //console.log(req.body);
         ValidatorUtil.catchValidation(req);
 
 		const  { first_name, last_name, email, birth_date, street, street_number, city, country, password } = req.body;
-		//let _id = mongoose.Types.ObjectId(); // Generating new MongoDB _ID
+		
+        //let _id = mongoose.Types.ObjectId(); // Generating new MongoDB _ID
         const pswrd_hash = await Bcrypt.hash(password, Config.PASSWORD_HASH_SAIL)
-        const token = common.generateRandomString(32);
+        const token = Common.generateRandomString(32);
 
         let user = {};
         user.first_name = first_name;

@@ -4,7 +4,7 @@ exports.MONGODB_URI = 'mongodb+srv://admin_node:SRTI@nodejs.iciqw.mongodb.net/sr
 exports.JWT_SECRET = 'WhatIsMySecret!';
 exports.TOKEN_EXPIRES_IN = '30d';
 
-exports.PORT = 3000;
+exports.PORT = 8080;
 
 // user model config
 exports.PASSWORD_HASH_SAIL = 12;

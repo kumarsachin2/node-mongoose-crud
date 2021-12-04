@@ -1,6 +1,6 @@
 // project config
 exports.APP_NAME = 'Signup';
-exports.MONGODB_URI = 'mongodb+srv://admin_node:SRTI@nodejs.iciqw.mongodb.net/srtidb?retryWrites=true&w=majority';
+exports.MONGODB_URI = 'mongodb+srv://admin_node:PASSWORD@nodejs.iciqw.mongodb.net/DBNAME?retryWrites=true&w=majority';
 exports.JWT_SECRET = 'WhatIsMySecret!';
 exports.TOKEN_EXPIRES_IN = '30d';
 
